@@ -15,11 +15,4 @@ Tests/**/*.csproj.user
 Tests/**/*.suo
 *.trx
 Source/TestResults/
-*.ide-wal
-*.ide-shm
-*.ide
-*.lock
-/.vs/VSWorkspaceState.json
-/.vs/slnx.sqlite
-*.suo
-/.vs/ProjectSettings.json
+Source/.vs
