@@ -23,6 +23,7 @@ namespace Svg.UnitTests
                 stream.Position = 0;
 
                 var xmlDoc = new XmlDocument();
+                xmlDoc.XmlResolver = new SvgDtdResolver();
                 xmlDoc.Load(stream);
                 Assert.AreEqual("test1", xmlDoc.DocumentElement.FirstChild.InnerText);
             }

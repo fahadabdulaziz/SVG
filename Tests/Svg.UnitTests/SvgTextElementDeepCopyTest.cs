@@ -44,10 +44,12 @@ namespace Svg.UnitTests
             memoryStream.Seek(0, SeekOrigin.Begin);
 
             var xmlDocument = new XmlDocument();
+            xmlDocument.XmlResolver = new SvgDtdResolver();
             xmlDocument.Load(memoryStream);
 
-            Assert.AreEqual(2, xmlDocument.ChildNodes.Count);
-            var svgNode = xmlDocument.ChildNodes[1];
+            // the first node is the added DTD declaration
+            Assert.AreEqual(3, xmlDocument.ChildNodes.Count);
+            var svgNode = xmlDocument.ChildNodes[2];
 
             // Filter all significant whitespaces.
             var svgChildren = svgNode.ChildNodes
