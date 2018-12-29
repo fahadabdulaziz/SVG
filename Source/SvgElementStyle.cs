@@ -15,7 +15,7 @@ namespace Svg
         private bool _dirty;
 
         /// <summary>
-        /// Gets or sets a value indicating whether this element's <see cref="Path"/> is dirty.
+        /// Gets or sets a value indicating whether this element's 'Path' is dirty.
         /// </summary>
         /// <value>
         /// 	<c>true</c> if the path is dirty; otherwise, <c>false</c>.
@@ -247,6 +247,16 @@ namespace Svg
         {
             get { return (SvgFontWeight)(this.Attributes["font-weight"] ?? SvgFontWeight.Inherit); }
             set { this.Attributes["font-weight"] = value; this.IsPathDirty = true; }
+        }
+
+        /// <summary>
+        /// Refers to the text transformation.
+        /// </summary>
+        [SvgAttribute("text-transform", true)]
+        public virtual SvgTextTransformation TextTransformation
+        {
+            get { return (SvgTextTransformation)(this.Attributes["text-transform"] ?? SvgTextTransformation.Inherit); }
+            set { this.Attributes["text-transform"] = value; this.IsPathDirty = true; }
         }
 
         private enum FontParseState

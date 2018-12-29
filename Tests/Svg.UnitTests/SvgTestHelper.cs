@@ -124,6 +124,7 @@ namespace Svg.UnitTests
             {
                 Trace.WriteLine("Load XmlDocument from resource data.");
                 var xmlDoc = new XmlDocument();
+                xmlDoc.XmlResolver = new SvgDtdResolver();
                 xmlDoc.Load(s);
                 Trace.WriteLine("Done XmlDocument loading from resource data.");
                 return xmlDoc;

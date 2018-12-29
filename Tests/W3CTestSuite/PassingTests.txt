@@ -136,7 +136,10 @@ painting-fill-04-t.svg
 painting-fill-05-b.svg
 painting-stroke-01-t.svg
 struct-defs-01-t.svg
+struct-use-01-t.svg
+struct-use-03-t.svg
 struct-use-05-b.svg
+struct-use-12-f.svg
 struct-use-14-f.svg
 struct-use-15-f.svg
 styling-class-01-f.svg
@@ -171,6 +174,7 @@ text-ws-02-t.svg
 text-ws-03-t.svg
 types-basic-01-f.svg
 painting-stroke-02-t.svg
+painting-stroke-04-t.svg
 coords-viewattr-04-f.svg
 fonts-desc-01-t.svg
 fonts-elem-05-t.svg
